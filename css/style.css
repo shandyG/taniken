@@ -136,6 +136,85 @@ img {
   width: 100%;
 }
 
+/* kv */
+.kv{
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kv .main-copy{
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: .2em;
+}
+
+.kv .sub-copy{
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .kv{
+    min-width: 960px;
+  }
+
+  .kv .main-copy{
+    font-size: 60px;
+  }
+
+  .kv .sub-copy{
+    font-size: 30px;
+  }
+}
+
+/* video */
+.video{
+  width: 100%;
+  height: 50vh;
+  background: url(../img/kv-alternative.jpg) no-repeat center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 57, 75, .3);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.video video{
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .video{
+    min-width: 960px;
+  }
+}
+
+
+
 /*--------------------------------
  メインビジュアル
 ---------------------------------*/
@@ -143,7 +222,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 20vh;
   text-align: center;
 }
 
@@ -335,7 +414,13 @@ img {
 }
 
 .article-title {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.article-subtitle {
+  font-size: 15px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
